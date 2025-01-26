@@ -11,7 +11,7 @@ Barnacles: sticky little crustaceans related to crabs, lobsters, and shrimps
 
 
 
-**Brainstorm an idea for a system**
+**Brainstorm an idea for a system:**
 Develop a computer vision-based system that automates the identification and analysis of barnacle populations from images or videos of marine habitats. The system could measure barnacle density, size, and growth rates over time by processing photos taken at regular intervals, significantly speeding up manual analysis.
 
 **Critical subtasks:**
@@ -52,7 +52,7 @@ DALILabData3.R
   Time Series: Shows barnacle counts over time.
   Map: Interactive map with barnacle density and metadata.
 
-**Conclusions**
+**Conclusions:**
 This challenge was super hard but very worthwhile! I was able to apply image processing techniques that I learned from past data visualization courses, as well as new techniques I learned through research. I did a lot of research on different R packages before coming across ones that actually worked and were applicable to the given data. I did have to make up some fake data to fill in gaps where real data was unavailable, but the final prototype ended up working!
 
 Through this project, I learned about concepts like binary thresholding and connected component analysis. I also improved my coding skills, particularly in debugging, troubleshooting, and testing different approaches when things didn’t work as expected. It was rewarding to see the barnacle data visualized in multiple formats, from heatmaps to interactive maps. Overall, this project not only strengthened my technical skills but also reinforced the importance of persistence and creative problem-solving in tackling complex challenges.
