@@ -6,23 +6,56 @@ These scientists have now come to you to speed up their pipeline. What system ca
 
 To develop a solution, you are provided with several images of barnacles (with the fixed size green frame) in the following folder: 
 
+
 Barnacles: sticky little crustaceans related to crabs, lobsters, and shrimps
 
 
 
+**Brainstorm an idea for a system**
+Develop a computer vision-based system that automates the identification and analysis of barnacle populations from images or videos of marine habitats. The system could measure barnacle density, size, and growth rates over time by processing photos taken at regular intervals, significantly speeding up manual analysis.
 
-Here is a rough step-by-step process to follow, though you are welcome to deviate as necessary
+**Critical subtasks:**
+- Image Preprocessing
+  Input: Images of barnacles.
+  Output: Enhanced and filtered images suitable for further analysis.
+- Barnacle Detection and Segmentation:
+  Input: Preprocessed images.
+  Output: Coordinates and boundaries of individual barnacles in the image.
+- Measurement and Analysis:
+  Input: Detected barnacle boundaries.
+  Output: Metrics like barnacle size, density, and growth rates.
+- Data Visualization:
+  Input: Analytical results.
+  Output: Heatmaps, charts, or time-lapse animations showing changes in barnacle populations.
 
-1. Brainstorm an idea for a system that can help the scientists get their work done faster. This only needs to be at a level of detail of a few sentences. 
-2. Identify one or more critical subtasks that are necessary to solving the task. Define these tasks clearly by thinking about what information each one will receive and what outputs they are responsible for providing. 
-3. Pick a subtask that you are interested in working on, and think about how you can evaluate performance on it. What metrics do you care about, and is it practical for you to compute them with just the data we’ve provided for you?
-4. Build a prototype which attempts to do your identified subtask
-5. Analyze the performance of your prototype, and report your results!
-6. Make some conclusions! If you built some type of automation prototype, is your approach worth pursuing? What might work better? If you build a visualization, what does your prototype tell you?
-7. Tell us about your learning process. As stated, one of the main points of this application process is for you to learn new things. What is something you learned that excited you?
+**Build a prototype:**
+DALILabData.R 
+- Analyzes an image of barnacles by detecting, counting, and measuring the areas of individual barnacles.
+- Using unseen_img2.png
+DALILabData2.R 
+- Same code as DALILabData.R, applied to unseen_img1.png
+- Not applicable because it does not take into account the green frame.
+DALILabData2.5.R 
+- Takes green frame into account; HOWEVER, requires prior knowledge of green frame coordinates.
+- AKA does not automatically detect the green frame.
+DALILabData3.R 
+-  Defines a Shiny app that allows you to analyze barnacle data based on image processing results.
+-  Not accurate because it uses FAKE DATA (location, latitude, longitude, and date) for each image.
+
+**Key Features:**
+- Image Processing:
+  Processes the two provided images to calculate barnacle counts and average areas.
+- Static Dataset:
+  Predefined metadata (location, latitude, longitude, and date) for each image.
+- Visualizations:
+  Heatmap: Displays barnacle density by location.
+  Time Series: Shows barnacle counts over time.
+  Map: Interactive map with barnacle density and metadata.
+
+**Conclusions**
+This challenge was super hard but very worthwhile! I was able to apply image processing techniques that I learned from past data visualization courses, as well as new techniques I learned through research. I did a lot of research on different R packages before coming across ones that actually worked and were applicable to the given data. I did have to make up some fake data to fill in gaps where real data was unavailable, but the final prototype ended up working!
+
+Through this project, I learned about concepts like binary thresholding and connected component analysis. I also improved my coding skills, particularly in debugging, troubleshooting, and testing different approaches when things didn’t work as expected. It was rewarding to see the barnacle data visualized in multiple formats, from heatmaps to interactive maps. Overall, this project not only strengthened my technical skills but also reinforced the importance of persistence and creative problem-solving in tackling complex challenges.
 
 
 
-1. My goal is to create a dashboard that provides scientists with visualizations of barnacle density and distribution across different tide pools, locations, or time periods. This reduces the need for manual counting and shifts the focus to interpreting patterns and trends in the data.
-2. 
-3. 
